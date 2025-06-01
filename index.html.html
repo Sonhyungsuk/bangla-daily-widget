@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오늘의 방글라 한마디</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffefb;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 350px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-size: 18px;
+      color: #222;
+    }
+    .phrase {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .ban {
+      font-weight: bold;
+      color: #1a73e8;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>📅 오늘의 방글라 한마디</h2>
+  <div class="phrase" id="kor"></div>
+  <div class="phrase ban" id="ban"></div>
+
+  <script>
+    const phrases = [
+      { kor: "안녕하세요", ban: "아쌀라물라이꿈" },
+      { kor: "이름이 뭐예요?", ban: "뚤라 남 끼" },
+      { kor: "화장실 어디예요?", ban: "바스트룸 코타에" },
+      { kor: "감사합니다", ban: "도논노밧" },
+      { kor: "볼펜 없으면 필요없다", ban: "볼펜 나타클레 락베나" },
+      { kor: "다음에", ban: "말뽀레" },
+      { kor: "시간, 오버타임시 사용", ban: "건따" },
+      { kor: "그거 줘요", ban: "에따 딘" },
+      { kor: "돈이 없어요", ban: "따까 나이" },
+      { kor: "이쪽이에요", ban: "이디께" },
+      { kor: "저쪽이에요", ban: "오디께" },
+      { kor: "왜 일을 안하십니까", ban: "까스 꼬렌니 깨노" },
+      { kor: "언제 끝납니까", ban: "꼬베이 쎄쇼 하베" },
+      { kor: "담배 피우지 마세요", ban: "드시 말 벤나" },
+      { kor: "누가 했습니까?", ban: "께 꼬레쎄" },
+      { kor: "내가 하지 않았습니다", ban: "아미 꼬리니" },
+      { kor: "잠시만 기다리세요", ban: "뚜꾸 보써 딃헨" },
+      { kor: "문이 안 열립니다", ban: "따라잇 자이 나" },
+      { kor: "전기 불이 안 들어옵니다", ban: "바이쑤 나잇" },
+      { kor: "더럽습니다", ban: "포श" },
+      { kor: "깨끗합니다", ban: "뽀리싯카르" },
+      { kor: "가지 마세요", ban: "자벤 나" },
+      { kor: "너무 시끄럽습니다", ban: "꾸비 쇼르" },
+      { kor: "너무 더워요", ban: "꾸비 껄로" },
+      { kor: "너무 추워요", ban: "꾸비 뎃" },
+      { kor: "에어컨 켜주세요", ban: "A/C 차루" },
+      { kor: "일하세요", ban: "까스 꼬렌" },
+      { kor: "모르겠습니다", ban: "잔이나" },
+      { kor: "무슨 말입니까?", ban: "끼 보렌" },
+      { kor: "다시 말해주세요", ban: "아버 까따 보렌" },
+      { kor: "천천히 말해주세요", ban: "올또 보렌" },
+      { kor: "아니요", ban: "나" },
+      { kor: "예", ban: "지" },
+      { kor: "출근합니다", ban: "까스 꼬르보" },
+      { kor: "퇴근합니다", ban: "바리 자보" },
+      { kor: "화장실 갑니다", ban: "바스트룸 자보" },
+      { kor: "밥 먹으러 갑니다", ban: "밧 카이보" },
+      { kor: "잠깐 나갔다 오겠습니다", ban: "뚜꾸 바이라 자보" }
+    ];
+
+    const today = new Date();
+    const index = today.getDate() % phrases.length;
+    const todayPhrase = phrases[index];
+
+    document.getElementById("kor").textContent = `🗣️ 한국어: ${todayPhrase.kor}`;
+    document.getElementById("ban").textContent = `🇧🇩 방글라어: ${todayPhrase.ban}`;
+  </script>
+</body>
+</html>
